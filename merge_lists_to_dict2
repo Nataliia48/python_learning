@@ -1,0 +1,17 @@
+def merge_list_to_dict(list_one, list_two):
+    zipped_seq = zip(list_one, list_two)
+    return dict(zipped_seq)
+
+
+res_one = merge_list_to_dict(list_one=['a', 'b', 'c'], list_two=[10, True, []])
+print(res_one)
+
+res_two = merge_list_to_dict(list_two=[[], True, 10], list_one=['abc'])
+print(res_two)
+
+res_three = merge_list_to_dict(['a', True, 10], list_two=['abc'])
+print(res_three)   
+
+# SyntaxError: positional argument follows keyword argument
+# res_three = merge_list_to_dict(list_two=['abc'],[[], True, 10])
+# print(res_three)                            
