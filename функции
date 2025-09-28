@@ -1,19 +1,8 @@
-def my_fn(a, b):
-    a = a + 1
-    c = a + b
-    return c
+def merge_list_to_dict(list_one, list_two):
+    zipped_seq =  zip(list_one, list_two)
+    return dict(zipped_seq)
 
-res = my_fn(10, 3)
-print(res)
-
-def increase_person_age(person):
-    person['age'] += 1
-    return person
-
-person_one = {
-    'name': 'Bob',
-    'age': 21
-}
-
-increase_person_age(person_one)
-print(person_one['age'])
+res_one = merge_list_to_dict(['a','b', 'c'], [10, True, []])
+print(res_one)
+    
+   
