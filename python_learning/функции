@@ -1,0 +1,19 @@
+def my_fn(a, b):
+    a = a + 1
+    c = a + b
+    return c
+
+res = my_fn(10, 3)
+print(res)
+
+def increase_person_age(person):
+    person['age'] += 1
+    return person
+
+person_one = {
+    'name': 'Bob',
+    'age': 21
+}
+
+increase_person_age(person_one)
+print(person_one['age'])
